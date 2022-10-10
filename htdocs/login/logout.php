@@ -7,5 +7,5 @@
 ?>
 
 <script>
-    location.href="../main/main.php"
+    location.href="../main/main.php";
 </script>

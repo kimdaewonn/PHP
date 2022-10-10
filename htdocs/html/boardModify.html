@@ -65,9 +65,8 @@
     <!-- //header -->
 
     <main id="main">
-
         <section id="board" class="container">
-            <h2>게시판 보기 영역입니다</h2>
+            <h2>게시판 보기 영역입니다.</h2>
             <div class="board__inner">
                 <div class="board__title">
                     <h3>게시판 수정하기</h3>
@@ -76,7 +75,7 @@
                 <div class="board__modify">
                     <form action="boardModifySave.php" name="boardModify" method="post">
                         <fieldset>
-                            <legend>게시판 수정 영역입니다</legend>
+                            <legend>게시판 수정 영역입니다.</legend>
                             <div>
                                 <label for="boardID">번호</label>
                                 <input type="text" name="boardID" id="boardID">
@@ -87,21 +86,19 @@
                             </div>
                             <div>
                                 <label for="boardContents">내용</label>
-                                <textarea type="text" name="boardContents" id="boardContents" rows="20"></textarea>
+                                <textarea name="boardContents" id="boardContents" rows="20"></textarea>
                             </div>
                             <div>
                                 <label for="boardPass">비밀번호</label>
-                                <input type="password" name="boardPass" id="boardPass" placeholder="로그인 비밀번호를 입력해주세요!" autocomplete="off" required></input>
+                                <input type="password" name="boardPass" id="boardPass" placeholder="로그인 비밀번호를 입력해주세요!"
+                                    autocomplete="off" required></input>
                             </div>
                             <button type="submit" value="수정하기" class="btn">수정하기</button>
                         </fieldset>
                     </form>
                 </div>
-
             </div>
-
         </section>
-
         <!-- //board -->
 
 
@@ -116,7 +113,6 @@
         </div>
     </footer>
     <!-- //footer -->
-
 </body>
 
 </html>

@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
+    <title>게시판</title>
 
     <?php include "../include/link.php" ?>
 </head>
@@ -27,7 +27,7 @@
 
     <main id="main">
         <section id="board" class="container">
-            <h2>게시판 영역입니다</h2>
+            <h2>게시판 영역입니다.</h2>
             <div class="board__inner">
                 <div class="board__title">
                     <h3>게시판 글쓰기</h3>
@@ -49,10 +49,7 @@
                         </fieldset>
                     </form>
                 </div>
-            </div>
         </section>
-        <!-- //board -->
-
     </main>
     <!-- //main -->
 

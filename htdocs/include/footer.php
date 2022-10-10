@@ -5,4 +5,3 @@
         <div>blog by webstoryboy</div>
     </div>
 </footer>
-<!-- //footer -->

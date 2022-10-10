@@ -12,13 +12,13 @@
         </h1>
         <div class="right">
             <ul>
-            <?php if( isset($_SESSION['myMemberID']) ){ ?>
-                <li><a href="#" class="black"><?=$_SESSION['youName']?>님 환영합니다.</a></li>
-                <li><a href="../login/logout.php">로그아웃</a></li>
-            <?php } else { ?>
-                <li><a href="#" class="loginBtn">로그인</a></li>
-                <li><a href="../login/join.php">회원가입</a></li>
-            <?php } ?>
+                <?php if( isset($_SESSION['myMemberID']) ){ ?>
+                    <li><a href="#" class="black"><?=$_SESSION['youName']?>님 환영합니다.</a></li>
+                    <li><a href="../login/logout.php">로그아웃</a></li>
+                <?php } else { ?>
+                    <li><a href="#" class="loginBtn">로그인</a></li>
+                    <li><a href="../login/join.php">회원가입</a></li>
+                <?php } ?>
             </ul>
         </div>
         <nav class="nav">
@@ -31,4 +31,3 @@
         </nav>
     </div>
 </header>
-<!-- //header -->

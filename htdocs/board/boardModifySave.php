@@ -3,6 +3,7 @@
     include "../connect/session.php";
     include "../connect/sessionCheck.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,17 +13,22 @@
     <title>Document</title>
 </head>
 <body>
+    
 <?php
     $myBoardID = $_POST['myBoardID'];
     $boardTitle = $_POST['boardTitle'];
     $boardContents = $_POST['boardContents'];
     $youPass = $_POST['youPass'];
     $myMemberID = $_SESSION['myMemberID'];
+
     $boardTitle = $connect -> real_escape_string($boardTitle);
     $boardContents = $connect -> real_escape_string($boardContents);
+
     $sql = "SELECT youPass, myMemberID FROM myMember WHERE myMemberID = {$myMemberID}";
     $result = $connect -> query($sql);
+
     $memberInfo = $result -> fetch_array(MYSQLI_ASSOC);
+
     if($memberInfo['youPass'] === $youPass && $memberInfo['myMemberID'] === $myMemberID){
         $sql = "UPDATE myBoard SET boardTitle = '{$boardTitle}', boardContents = '{$boardContents}' WHERE myBoardID = '{$myBoardID}'";
         $connect -> query($sql);
@@ -33,5 +39,7 @@
 <script>
     location.href ="board.php";
 </script>
+
+
 </body>
 </html>

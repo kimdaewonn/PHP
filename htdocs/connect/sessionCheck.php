@@ -4,4 +4,4 @@
         Header("Location: ../main/alert.php");
         // echo "로그인을 먼저 해주세요!!";
     }
-?>
+?> 
