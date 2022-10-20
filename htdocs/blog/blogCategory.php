@@ -2,18 +2,12 @@
     include "../connect/connect.php";
     include "../connect/session.php";
 
-    $myBlogID = $_GET['blogID'];
-
-
-    $blogSql = "SELECT * FROM myBlog WHERE myBlogID = {$myBlogID}";
-    $blogResult = $connect -> query($blogSql);
-    $blogInfo = $blogResult -> fetch_array(MYSQLI_ASSOC);
-
-    // $commentSql = "SELECT * FROM myComment";
-    // $commentResult = $connect -> query($commentSql);
-    // $commentInfo = $commentResult -> fetch_arrary(MYSQLI_ASSOC);
-
-?>
+    $category = $_GET['category'];
+    $categorySql = "SELECT * FROM myBlog WHERE blogDelete = 0 AND blogCategory = '$category' ORDER BY myBlogID DESC LIMIT 10";
+    $categoryResult = $connect -> query($categorySql);
+    $categoryInfo = $categoryResult -> fetch_array(MYSQLI_ASSOC);
+    $categoryCount = $categoryResult -> num_rows;?>
+    
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -55,13 +49,7 @@
             </div>
             <div class="blog__inner">
             <div class="blog__contents">
-                <div class="blog__contents__ad">
-                    <div></div>
-                </div>
-                <div class="blog__contents__cont">
-                    <?=$blogInfo['blogContents']?>
-                </div>
-                <div class="blog__contents__comment"></div>
+                <div class="blog__contents__card"></div>
             </div>
             <div class="blog__aside">
                 <div class="blog__aside__intro">

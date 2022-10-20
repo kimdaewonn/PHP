@@ -13,9 +13,23 @@
   @include flex_sb;
   @include border_bottom;
   padding-bottom: 70px;
+  align-items: flex-start;
+
+  .card {
+    position: relative;
+    .cate {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      background: #fff;
+      font-size: 14px;
+      border-radius: 30px;
+    }
+  }
 
   > div {
     width: 24%;
+    height: 400px;
     
     figure {
       position: relative;
@@ -53,13 +67,31 @@
     
     h3 {
       font-size: 1.3rem;
-      line-height: 2;
+      line-height: 1.6;
       margin-top: 0.3em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: 5px;
     }
     p {
       font-size: 1rem;
       font-weight: 300;
       line-height: 1.5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; 
+      -webkit-box-orient: vertical;
+    }
+    .cate {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      background: #fff;
+      font-size: 14px;
+      border-radius: 30px;
+      padding: 2px 20px;
     }
   }
 }
