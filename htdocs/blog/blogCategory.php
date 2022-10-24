@@ -11,8 +11,6 @@
     $categoryInfo = $categoryResult -> fetch_array(MYSQLI_ASSOC);
 
     $categoryCount = $categoryResult -> num_rows;
-
-
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +39,7 @@
                     <p><?=$categoryInfo['blogCategory']?>와 관련된 글이 <?=$categoryCount?>개 있습니다.</p>                   
                 </div>
                 <div class="blog__contents">
-                    <div class="card__inner">
+                    <div class="card__inner horizon">
                     <?php
                         foreach($categoryResult as $blog){ ?>
                             <div class="card">

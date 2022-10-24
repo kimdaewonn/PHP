@@ -28,6 +28,7 @@
     echo "<pre>";
     var_dump($blogImgFile);
     echo "</pre>";
+
     // array(5) {
     //     ["name"]=>
     //     string(9) "icon1.png"
@@ -40,11 +41,13 @@
     //     ["size"]=>
     //     int(1479)
     // }
+
     //이미지 파일명 확인
     if($blogImgType){
         $fileTypeExtension = explode("/", $blogImgType);
         $fileType = $fileTypeExtension[0];      //image
         $fileExtension = $fileTypeExtension[1]; //png
+        
         //이미지 타입 확인
         if($fileType == "image"){
             if($fileExtension == "jpg" || $fileExtension == "jpeg" || $fileExtension == "png" || $fileExtension == "gif"){
